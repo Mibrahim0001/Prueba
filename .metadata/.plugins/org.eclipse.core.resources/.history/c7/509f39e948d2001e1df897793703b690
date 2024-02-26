@@ -1,0 +1,36 @@
+package cajaNegra;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class testsCaja {
+	Caja c = new Caja();
+
+	@Test
+	void test1() {
+		String operacion = "ingresar";
+		int saldoInicial = 150;
+		int cantidad = 50;
+		
+		
+		String respuesta  = c.app(operacion, saldoInicial, cantidad);
+		String esperada = "El saldo actual es de 200€";
+		
+		assertEquals(esperada, respuesta);
+	}
+	@Test
+	void test2() {
+		String operacion = "retirar";
+		int saldoInicial = 150;
+		int cantidad = 50;
+		
+		
+		String respuesta  = c.app(operacion, saldoInicial, cantidad);
+		String esperada = "Ya tiene disponible su dinero. Su saldo es de 100€";
+		
+		assertEquals(esperada, respuesta);
+	}
+	
+
+}

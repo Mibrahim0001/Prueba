@@ -1,0 +1,25 @@
+package cajaNegra;
+
+public class Caja {
+	public static String app(String operaciones, int cantidad, int saldoInicial) {
+		String mensaje = "";
+		operaciones = operaciones.toLowerCase();
+		if (!operaciones.equals("ingresar") || !operaciones.equals("retirar"))
+			return "Operación no válida";
+		if (saldoInicial <= 0)
+			return "El saldo inicial indicado no es posible";
+		if (operaciones.equals("retirar")) {
+			if (cantidad <= 0 && (cantidad % 50 != 0))
+				return "La cantidad ha de ser múltiplo de 50 y mayor que 0";
+		}else {
+			if(cantidad <= 0) {
+				return "La cantidad ha de ser mayor que 0";
+			}
+			saldoInicial = saldoInicial +cantidad;
+			return "El saldo actual es de " + saldoInicial + "€";
+		}
+
+		return mensaje;
+	}
+
+}

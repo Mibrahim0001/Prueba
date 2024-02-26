@@ -1,0 +1,22 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class testApp {
+	Tarjeta t = new Tarjeta();
+
+	@Test
+	void test() {
+		char cTipo = 'B';
+		int iFil = -1;
+		int iCols = -1;
+		String nombre ="jose";
+		
+		String respuesta  = t.Fidelizacion(cTipo, iFil, iCols, nombre);
+		String esperada = "";
+		
+		assertEquals(esperada, respuesta);
+		
+	}
+
+}

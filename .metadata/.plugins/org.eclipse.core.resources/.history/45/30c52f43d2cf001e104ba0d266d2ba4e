@@ -1,0 +1,12 @@
+package cajaNegra;
+
+public class Caja {
+	public static String app(String operaciones, int cantidad, int saldoInicial) {
+		String mensaje = "";
+		operaciones = operaciones.toLowerCase();
+		if(operaciones != "ingresar" || operaciones != "retirar") return "Operación no válida";
+		if(cantidad <= 0) return "El saldo inicial indicado no es posible";
+		return mensaje;
+	}
+
+}
